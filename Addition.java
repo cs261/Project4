@@ -1,7 +1,7 @@
 public class Addition extends transaction {
 	private int transaction;
-	public Addition(int accountNumber, String description, double amount) {
-		super(accountNumber, description, amount);
+	public Addition(String description, double amount) {
+		super(description, amount);
 		transaction = newTransaction();
 	}
 	public double add(double change){
