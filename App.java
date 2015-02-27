@@ -40,7 +40,7 @@ public class App {
 		
 		System.out.println("Please enter the description of the transaction");
 		String description = in.nextLine();
-		transaction trans = new Addition(accountNumber, description, amount);
+		transaction trans = new Addition(description, amount);
 		list.add(trans);
 		accountBalance += ((Addition) trans).add(amount);
 	}
@@ -49,7 +49,7 @@ public class App {
 		list.add(trans);
 		accountBalance -= ((Subtraction) trans).subtract(amount);
 	}
-		public void subtract(){
+	public void subtract(){
 		System.out.println("Please enter the amount you wish to deposit");
 		while(!in.hasNextInt())
 		{
@@ -60,7 +60,7 @@ public class App {
 		in.nextLine();
 		System.out.println("Please enter the description of the transaction");
 		String comment = in.nextLine();
-		transaction trans = new Subtraction(accountNumber, comment, (debit * -1));
+		transaction trans = new Subtraction(comment, (debit * -1));
 		list.add(trans);
 		accountBalance -= ((Subtraction) trans).subtract(debit);
 	}
