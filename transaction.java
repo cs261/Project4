@@ -1,5 +1,5 @@
 
-public class transaction {
+public abstract class transaction {
 	private static int transNumber = 1423564;
 	private double change;
 	private String description = "";
@@ -11,7 +11,10 @@ public class transaction {
 	public double getChange(){
 		return change;
 	}
-	public int getTransaction(){
+	
+	abstract public int getTransaction();
+	
+	public int newTransaction(){
 		return transNumber++;
 	}
 	public String getDescription() {
