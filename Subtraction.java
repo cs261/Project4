@@ -1,7 +1,7 @@
 public class Subtraction extends transaction{
 	private int transaction;
-	public Subtraction(int accountNumber, String description, double amount) {
-		super(accountNumber, description, amount);
+	public Subtraction(String description, double amount) {
+		super(description, amount);
 		transaction = newTransaction();
 	}
 	public double subtract(double change){
