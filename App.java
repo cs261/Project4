@@ -23,12 +23,12 @@ public class App {
 	
 
 	public void add(double amount, String description){
-		transaction trans = new Addition(accountNumber, description, amount);
+		transaction trans = new Addition(description, amount);
 		list.add(trans);
 		accountBalance += ((Addition) trans).add(amount);
 	}
 	public void subtract(double amount, String description){
-		transaction trans = new Subtraction(accountNumber, description, (amount * -1));
+		transaction trans = new Subtraction(description, (amount * -1));
 		list.add(trans);
 		accountBalance -= ((Subtraction) trans).subtract(amount);
 	}
