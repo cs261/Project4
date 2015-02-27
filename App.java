@@ -85,6 +85,7 @@ public class App {
 			 break;
 		 case "s":
 			 System.out.println("what do you want to search for?");
+			 in.nextLine();
 			 String string = in.nextLine();
 			 search(string);
 			 break;
@@ -98,6 +99,7 @@ public class App {
 			 break;
 		 case "r":
 			 System.out.println("Please enter the description of what you want removed");
+			 in.nextLine();
 			 String remove = in.nextLine();
 			 remove(remove);
 			 break;
