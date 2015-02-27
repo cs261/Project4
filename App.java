@@ -21,12 +21,6 @@ public class App {
 		}
 	}
 	
-
-	public void add(double amount, String description){
-		transaction trans = new Addition(description, amount);
-		list.add(trans);
-		accountBalance += ((Addition) trans).add(amount);
-	}
 	public void add(){
 		Float amount = (float) 0;
 		System.out.println("Please enter the amount you wish to deposit");
@@ -44,11 +38,7 @@ public class App {
 		list.add(trans);
 		accountBalance += ((Addition) trans).add(amount);
 	}
-	public void subtract(double amount, String description){
-		transaction trans = new Subtraction(description, (amount * -1));
-		list.add(trans);
-		accountBalance -= ((Subtraction) trans).subtract(amount);
-	}
+
 	public void subtract(){
 		System.out.println("Please enter the amount you wish to deposit");
 		while(!in.hasNextInt())
@@ -67,14 +57,8 @@ public class App {
 	public double getBalance(){
 		return accountBalance;
 	}
-	public void search(String string){
-		System.out.println("Searching for \"" + string + "\"");
-		System.out.printf("%-15s %-20s %-15s %n", "Transaction", "Description", "Debit/Credit");
-		System.out.println("*************************************************");
-		list.search(string);
-		System.out.println();
-	}
-		public void search(){
+	
+	public void search(){
 		System.out.println("what do you want to search for?");
 		in.nextLine();
 		String string = in.nextLine();
