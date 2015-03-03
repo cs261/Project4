@@ -1,10 +1,14 @@
-
 public abstract class transaction {
-	private static int transNumber = 1423564;
+	private int transNumber = 1423564;
 	private double change;
 	private String description = "";
 	
 	public transaction(int accountNumber, String description, double amount){
+		this.description = description;
+		this.change = amount;
+	}
+	public transaction(String description, double amount){
+		this.transNumber = transNumber++;
 		this.description = description;
 		this.change = amount;
 	}
