@@ -20,7 +20,11 @@ public class App {
 			options(cin);
 		}
 	}
-	
+	public void add(double amount, String description){		
+		transaction trans = new Addition(description, amount);		
+		list.add(trans);		
+		accountBalance += ((Addition) trans).add(amount);		
+	}
 	public void add(){
 		Float amount = (float) 0;
 		System.out.println("Please enter the amount you wish to deposit");
@@ -38,7 +42,11 @@ public class App {
 		list.add(trans);
 		accountBalance += ((Addition) trans).add(amount);
 	}
-
+	public void subtract(double amount, String description){		
+		transaction trans = new Subtraction(description, (amount * -1));		
+		list.add(trans);		
+		accountBalance -= ((Subtraction) trans).subtract(amount);		
+	}
 	public void subtract(){
 		System.out.println("Please enter the amount you wish to deposit");
 		while(!in.hasNextInt())
