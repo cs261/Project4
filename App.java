@@ -54,7 +54,7 @@ public class App {
 			System.out.println("Error: Please enter an amount. ");
 			in.nextLine();
 		}
-		int debit = in.nextInt();
+		double debit = in.nextDouble();
 		in.nextLine();
 		System.out.println("Please enter the description of the transaction");
 		String comment = in.nextLine();
